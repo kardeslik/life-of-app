@@ -7,7 +7,7 @@ import android.os.Bundle;
 public class AppLifecycleManager implements Application.ActivityLifecycleCallbacks {
 
   public interface Listener {
-    void onAppLunched();
+    void onAppLaunched();
 
     void onAppCameForeground();
 
@@ -30,7 +30,7 @@ public class AppLifecycleManager implements Application.ActivityLifecycleCallbac
   @Override
   public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
     if (counter == COUNTER_LIMIT && !isChangingConfigurations && savedInstanceState == null) {
-      listener.onAppLunched();
+      listener.onAppLaunched();
     }
   }
 
