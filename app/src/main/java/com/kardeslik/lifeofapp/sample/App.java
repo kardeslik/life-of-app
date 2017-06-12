@@ -21,7 +21,7 @@ public class App extends Application implements AppLifecycleManager.Listener {
   }
 
   @Override
-  public void onAppLunched() {
+  public void onAppLaunched() {
     Log.d(TAG, "Application launched!");
   }
 
